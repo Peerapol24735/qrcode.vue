@@ -108,10 +108,10 @@ namespace qrcodegen {
 			}
 
 			// Increase the error correction level while the data still fits in the current version number
-			for (const newEcl of [QrCode.Ecc.MEDIUM, QrCode.Ecc.QUARTILE, QrCode.Ecc.HIGH]) {  // From low to high
-				if (boostEcl && dataUsedBits <= QrCode.getNumDataCodewords(version, newEcl) * 8)
-					ecl = newEcl;
-			}
+			// for (const newEcl of [QrCode.Ecc.MEDIUM, QrCode.Ecc.QUARTILE, QrCode.Ecc.HIGH]) {  // From low to high
+			// 	if (boostEcl && dataUsedBits <= QrCode.getNumDataCodewords(version, newEcl) * 8)
+			// 		ecl = newEcl;
+			// }
 
 			// Concatenate all segments to create the data bit string
 			let bb: Array<bit> = []
